@@ -16,9 +16,8 @@ import { trigger,style,transition,animate,keyframes,query,stagger } from '@angul
             style({opacity: 0, transform: 'translateY(-75%)', offset: 0}),
             style({opacity: .5, transform: 'translateY(35px)', offset: .3}),
             style({opacity: 1, transform: 'translateY(0)', offset: 1}),
-          ]))
-        ]))
-      ])
+          ]))]), {optional: true})
+        ])
     ])
   ]
 })
@@ -27,7 +26,7 @@ export class HomeComponent implements OnInit {
   itemCount: number;
   btnText: string = 'Add an item';
   goalText: string = 'My first life goal';
-  goals = [];
+  goals = ['First Life Goal', 'Climb a mountain', 'Go to Yosemite'];
 
   constructor() { }
 
